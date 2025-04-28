@@ -1,0 +1,307 @@
+{% extends 'base.html' %}
+
+{% block title %}Wanderlust - Discover Your Next Adventure{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section" style="background-image: url('https://images.unsplash.com/photo-1488085061387-422e29b40080?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+        <div class="row">
+            <div class="col-lg-8 py-5">
+                <h1 class="display-3 fw-bold mb-3 animate-on-scroll">Explore The World With Us</h1>
+                <p class="lead mb-4 animate-on-scroll">Discover breathtaking destinations, unique experiences, and create memories that last a lifetime.</p>
+                <div class="d-flex flex-wrap gap-3 animate-on-scroll">
+                    <a href="/destinations" class="btn btn-primary btn-lg rounded-pill px-4">Explore Destinations</a>
+                    <a href="/tours" class="btn btn-outline-light btn-lg rounded-pill px-4">View Tour Packages</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Search Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="card shadow border-0">
+                    <div class="card-body p-4">
+                        <h4 class="text-center mb-4">Find Your Perfect Trip</h4>
+                        <form action="/tours" method="get">
+                            <div class="row g-3">
+                                <div class="col-md-4">
+                                    <label for="destination" class="form-label">Destination</label>
+                                    <select class="form-select" id="destination" name="destination">
+                                        <option value="" selected>Anywhere</option>
+                                        <option value="Europe">Europe</option>
+                                        <option value="Asia">Asia</option>
+                                        <option value="Africa">Africa</option>
+                                        <option value="North America">North America</option>
+                                        <option value="South America">South America</option>
+                                        <option value="Oceania">Oceania</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="duration" class="form-label">Duration</label>
+                                    <select class="form-select" id="duration" name="duration">
+                                        <option value="" selected>Any Length</option>
+                                        <option value="short">Short (1-3 days)</option>
+                                        <option value="medium">Medium (4-7 days)</option>
+                                        <option value="long">Long (8+ days)</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-4 d-flex align-items-end">
+                                    <button type="submit" class="btn btn-primary w-100">Search</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Featured Destinations -->
+<section class="py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold">Featured Destinations</h2>
+            <p class="text-muted">Explore our handpicked selection of incredible places around the world</p>
+        </div>
+        <div class="row g-4">
+            {% for destination in featured_destinations %}
+            <div class="col-md-6 col-lg-4 animate-on-scroll">
+                <a href="/destinations/{{ destination.id }}" class="text-decoration-none">
+                    <div class="destination-card">
+                        <div class="destination-card__image" style="background-image: url('{{ destination.image_url }}');"></div>
+                        <div class="destination-card__overlay">
+                            <h3 class="fs-5 fw-bold mb-1">{{ destination.name }}</h3>
+                            <p class="mb-0">{{ destination.country }}</p>
+                            <div class="mt-2">
+                                <span class="badge bg-primary rounded-pill">{{ destination.region }}</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="text-center mt-5">
+            <a href="/destinations" class="btn btn-outline-primary btn-lg rounded-pill px-4">View All Destinations</a>
+        </div>
+    </div>
+</section>
+
+<!-- Why Choose Us -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <img src="https://images.unsplash.com/photo-1501446529957-6226bd447c46?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Travel Experience" class="img-fluid rounded-3 shadow animate-on-scroll">
+            </div>
+            <div class="col-lg-6">
+                <h2 class="fw-bold mb-4 animate-on-scroll">Why Choose Wanderlust</h2>
+                <div class="d-flex mb-4 animate-on-scroll">
+                    <div class="me-3">
+                        <i class="fas fa-map-marked-alt text-primary fa-2x"></i>
+                    </div>
+                    <div>
+                        <h5 class="fw-bold">Unique Destinations</h5>
+                        <p class="text-muted mb-0">We offer carefully selected destinations that provide authentic experiences and unforgettable memories.</p>
+                    </div>
+                </div>
+                <div class="d-flex mb-4 animate-on-scroll">
+                    <div class="me-3">
+                        <i class="fas fa-user-shield text-primary fa-2x"></i>
+                    </div>
+                    <div>
+                        <h5 class="fw-bold">Safe & Reliable</h5>
+                        <p class="text-muted mb-0">Your safety is our priority. We ensure all our tours meet strict safety standards with 24/7 support.</p>
+                    </div>
+                </div>
+                <div class="d-flex mb-4 animate-on-scroll">
+                    <div class="me-3">
+                        <i class="fas fa-dollar-sign text-primary fa-2x"></i>
+                    </div>
+                    <div>
+                        <h5 class="fw-bold">Best Value</h5>
+                        <p class="text-muted mb-0">Get the best experience at competitive prices with no hidden fees or unexpected costs.</p>
+                    </div>
+                </div>
+                <div class="d-flex animate-on-scroll">
+                    <div class="me-3">
+                        <i class="fas fa-heart text-primary fa-2x"></i>
+                    </div>
+                    <div>
+                        <h5 class="fw-bold">Passionate Experts</h5>
+                        <p class="text-muted mb-0">Our team of travel enthusiasts craft each itinerary with passion and insider knowledge.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Featured Tours -->
+<section class="py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold">Popular Tour Packages</h2>
+            <p class="text-muted">All-inclusive packages meticulously designed for unforgettable experiences</p>
+        </div>
+        <div class="row g-4">
+            {% for tour in featured_tours %}
+            <div class="col-lg-4 animate-on-scroll">
+                <div class="tour-card card h-100">
+                    <img src="{{ tour.image_url }}" class="card-img-top" alt="{{ tour.name }}" style="height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">{{ tour.name }}</h5>
+                        <div class="d-flex align-items-center mb-2">
+                            <div class="me-2">
+                                <span class="text-warning"><i class="fas fa-star"></i> {{ tour.rating }}</span>
+                            </div>
+                            <div class="small text-muted">({{ tour.reviews_count }} reviews)</div>
+                        </div>
+                        <p class="text-muted mb-3">{{ tour.description|truncate(100) }}</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <span class="d-block"><i class="far fa-clock me-1"></i> {{ tour.duration }} days</span>
+                                <span class="fw-bold text-primary">${{ tour.price }}</span> <span class="small text-muted">per person</span>
+                            </div>
+                            <a href="/tours/{{ tour.id }}" class="btn btn-sm btn-outline-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="text-center mt-5">
+            <a href="/tours" class="btn btn-outline-primary btn-lg rounded-pill px-4">View All Tours</a>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold">What Our Travelers Say</h2>
+            <p class="text-muted">Real experiences from our satisfied customers</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-4 animate-on-scroll">
+                <div class="testimonial-card">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="testimonial-card__avatar bg-primary d-flex align-items-center justify-content-center">
+                            <i class="fas fa-user fa-lg text-white"></i>
+                        </div>
+                        <div>
+                            <h5 class="mb-0 fw-bold">Sarah Johnson</h5>
+                            <p class="mb-0 text-muted small">European Classics Tour</p>
+                        </div>
+                    </div>
+                    <p class="mb-2">"Our European tour exceeded all expectations! The itinerary was perfectly balanced with guided excursions and free time. Our guide Maria was knowledgeable and passionate. Can't wait to book another trip with Wanderlust!"</p>
+                    <div class="text-warning">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 animate-on-scroll">
+                <div class="testimonial-card">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="testimonial-card__avatar bg-primary d-flex align-items-center justify-content-center">
+                            <i class="fas fa-user fa-lg text-white"></i>
+                        </div>
+                        <div>
+                            <h5 class="mb-0 fw-bold">Michael Chen</h5>
+                            <p class="mb-0 text-muted small">Asian Adventure Tour</p>
+                        </div>
+                    </div>
+                    <p class="mb-2">"The Asian Adventure was incredible! From the serene temples of Bali to the bustling streets of Tokyo, every moment was magical. The accommodations were excellent, and our guide Raj made the trip unforgettable."</p>
+                    <div class="text-warning">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 animate-on-scroll">
+                <div class="testimonial-card">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="testimonial-card__avatar bg-primary d-flex align-items-center justify-content-center">
+                            <i class="fas fa-user fa-lg text-white"></i>
+                        </div>
+                        <div>
+                            <h5 class="mb-0 fw-bold">Emily Rodriguez</h5>
+                            <p class="mb-0 text-muted small">South African Safari</p>
+                        </div>
+                    </div>
+                    <p class="mb-2">"Our South African Safari was the trip of a lifetime! Seeing the Big Five in their natural habitat was breathtaking. Cape Town is gorgeous, and the wine country was an unexpected delight. Worth every penny!"</p>
+                    <div class="text-warning">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Newsletter -->
+<section class="py-5 bg-primary">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+                <h2 class="fw-bold text-white mb-4 animate-on-scroll">Get Inspired For Your Next Trip</h2>
+                <p class="text-white-50 mb-4 animate-on-scroll">Subscribe to our newsletter and receive exclusive offers, travel tips, and inspiration for your next adventure.</p>
+                <form id="newsletter-form-hero" class="d-flex flex-column flex-md-row gap-2 justify-content-center animate-on-scroll">
+                    <input type="email" class="form-control form-control-lg" style="max-width: 400px;" placeholder="Your email address" required>
+                    <button type="submit" class="btn btn-light btn-lg">Subscribe</button>
+                </form>
+                <p class="text-white-50 small mt-3 animate-on-scroll">We respect your privacy. Unsubscribe at any time.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Instagram Feed -->
+<section class="py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold">Instagram</h2>
+            <p class="text-muted">Follow us <a href="#" class="text-decoration-none">@wanderlust</a> for more travel inspiration</p>
+        </div>
+        <div class="row g-2">
+            <div class="col-6 col-md-4 col-lg-2">
+                <img src="https://images.unsplash.com/photo-1535530992830-e25d07cfa780?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" class="img-fluid" alt="Instagram post">
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+                <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" class="img-fluid" alt="Instagram post">
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+                <img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" class="img-fluid" alt="Instagram post">
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+                <img src="https://images.unsplash.com/photo-1682687218904-de46ed992b58?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" class="img-fluid" alt="Instagram post">
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+                <img src="https://images.unsplash.com/photo-1527631746610-bca00a040d60?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" class="img-fluid" alt="Instagram post">
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+                <img src="https://images.unsplash.com/photo-1515859005217-8a1f08870f59?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" class="img-fluid" alt="Instagram post">
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

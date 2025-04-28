@@ -1,0 +1,566 @@
+[
+  {
+    "id": 1,
+    "name": "European Classics",
+    "description": "Experience the best of Europe's most iconic cities on this comprehensive tour. Visit historic landmarks, enjoy local cuisine, and immerse yourself in the rich cultural heritage of each destination. From the romantic streets of Paris to the canals of Venice, this tour offers unforgettable experiences at every stop.",
+    "destinations": [1, 4, 10],
+    "duration": 12,
+    "price": 2499,
+    "included": [
+      "11 nights accommodation in 4-star hotels",
+      "Daily breakfast and selected dinners",
+      "Professional tour guide throughout",
+      "All transportation between destinations",
+      "Skip-the-line access to major attractions",
+      "Welcome and farewell dinners"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arrival in Paris",
+        "description": "Arrive in Paris and transfer to your hotel. Evening welcome dinner in a local restaurant."
+      },
+      {
+        "day": 2,
+        "title": "Paris Exploration",
+        "description": "Guided tour of Paris including the Eiffel Tower, Louvre Museum, and Notre-Dame Cathedral."
+      },
+      {
+        "day": 3,
+        "title": "Paris at Leisure",
+        "description": "Free day to explore Paris at your own pace. Optional excursion to Versailles Palace."
+      },
+      {
+        "day": 4,
+        "title": "Paris to Santorini",
+        "description": "Morning flight to Santorini. Transfer to hotel and afternoon at leisure to enjoy the beautiful views."
+      },
+      {
+        "day": 5,
+        "title": "Santorini Island Tour",
+        "description": "Full-day tour of Santorini including Oia, Fira, and a visit to a local winery."
+      },
+      {
+        "day": 6,
+        "title": "Santorini Sailing",
+        "description": "Catamaran cruise around the island with swimming stops and BBQ lunch."
+      },
+      {
+        "day": 7,
+        "title": "Santorini at Leisure",
+        "description": "Free day to relax on the beach or explore more of the island."
+      },
+      {
+        "day": 8,
+        "title": "Santorini to Venice",
+        "description": "Morning flight to Venice. Transfer to hotel by water taxi and evening orientation walk."
+      },
+      {
+        "day": 9,
+        "title": "Venice Highlights",
+        "description": "Guided tour of St. Mark's Square, Doge's Palace, and a gondola ride through the canals."
+      },
+      {
+        "day": 10,
+        "title": "Murano and Burano",
+        "description": "Excursion to the islands of Murano (famous for glass) and Burano (known for lace and colorful houses)."
+      },
+      {
+        "day": 11,
+        "title": "Venice at Leisure",
+        "description": "Free day to explore Venice at your own pace. Optional cooking class available."
+      },
+      {
+        "day": 12,
+        "title": "Departure",
+        "description": "Transfer to Venice airport for your departure flight. End of tour services."
+      }
+    ],
+    "max_group_size": 16,
+    "difficulty_level": "Easy",
+    "image_url": "https://images.unsplash.com/photo-1493707553966-283afac8c358?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    "rating": 4.9,
+    "reviews_count": 127
+  },
+  {
+    "id": 2,
+    "name": "Asian Adventure",
+    "description": "Discover the wonders of Asia on this exciting adventure through some of the continent's most fascinating destinations. From the spiritual temples of Bali to the high-tech cityscape of Tokyo, experience the incredible diversity of Asian cultures, cuisines, and landscapes on this unforgettable journey.",
+    "destinations": [2, 5],
+    "duration": 10,
+    "price": 2199,
+    "included": [
+      "9 nights accommodation",
+      "Daily breakfast and selected meals",
+      "English-speaking local guides",
+      "All internal flights",
+      "Cultural activities and demonstrations",
+      "Airport transfers"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arrival in Bali",
+        "description": "Arrive in Bali and transfer to your hotel in Ubud. Welcome dinner with traditional Balinese performance."
+      },
+      {
+        "day": 2,
+        "title": "Temples and Rice Terraces",
+        "description": "Visit sacred temples and the stunning Tegallalang Rice Terraces. Afternoon coffee plantation tour."
+      },
+      {
+        "day": 3,
+        "title": "Ubud Exploration",
+        "description": "Morning yoga session, visit to the Monkey Forest, and traditional craft workshops."
+      },
+      {
+        "day": 4,
+        "title": "Bali Beach Day",
+        "description": "Transfer to south Bali. Day at leisure on the beautiful beaches. Optional surfing lesson."
+      },
+      {
+        "day": 5,
+        "title": "Uluwatu and Kecak Dance",
+        "description": "Visit Uluwatu Temple perched on a cliff and watch the mesmerizing Kecak fire dance at sunset."
+      },
+      {
+        "day": 6,
+        "title": "Bali to Tokyo",
+        "description": "Morning flight to Tokyo. Transfer to hotel and evening orientation walk in Shinjuku."
+      },
+      {
+        "day": 7,
+        "title": "Tokyo Highlights",
+        "description": "Full-day tour of Tokyo including Meiji Shrine, Shibuya Crossing, and Tokyo Skytree."
+      },
+      {
+        "day": 8,
+        "title": "Japanese Culture Day",
+        "description": "Participate in a tea ceremony, sushi making class, and visit to a sumo stable."
+      },
+      {
+        "day": 9,
+        "title": "Tokyo at Leisure",
+        "description": "Free day to explore Tokyo. Optional excursion to Mt. Fuji or Nikko available."
+      },
+      {
+        "day": 10,
+        "title": "Departure",
+        "description": "Transfer to Tokyo airport for your departure flight. End of tour services."
+      }
+    ],
+    "max_group_size": 12,
+    "difficulty_level": "Moderate",
+    "image_url": "https://images.unsplash.com/photo-1528164344705-47542687000d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    "rating": 4.8,
+    "reviews_count": 94
+  },
+  {
+    "id": 3,
+    "name": "American Icons",
+    "description": "Experience the diversity and grandeur of America's most iconic cities on this comprehensive tour. From the bustling streets of New York City to the historic sites of Washington D.C., this journey showcases the rich cultural tapestry of the United States. Enjoy unique experiences, delicious cuisine, and unforgettable sights along the way.",
+    "destinations": [3],
+    "duration": 7,
+    "price": 1899,
+    "included": [
+      "6 nights accommodation in premium hotels",
+      "Daily breakfast",
+      "Expert local guides",
+      "Luxury transportation",
+      "Skip-the-line tickets to major attractions",
+      "Welcome dinner in NYC"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arrival in New York",
+        "description": "Arrive in New York City and transfer to your Manhattan hotel. Evening welcome dinner with skyline views."
+      },
+      {
+        "day": 2,
+        "title": "Manhattan Exploration",
+        "description": "Full-day tour of iconic NYC landmarks including Empire State Building, Times Square, and Central Park."
+      },
+      {
+        "day": 3,
+        "title": "Statue of Liberty & Museums",
+        "description": "Morning visit to the Statue of Liberty and Ellis Island. Afternoon at the Metropolitan Museum of Art."
+      },
+      {
+        "day": 4,
+        "title": "Brooklyn & Local Neighborhoods",
+        "description": "Cross the Brooklyn Bridge and explore Brooklyn Heights, DUMBO, and Williamsburg. Evening food tour."
+      },
+      {
+        "day": 5,
+        "title": "New York at Leisure",
+        "description": "Free day to explore the city at your own pace. Optional Broadway show in the evening."
+      },
+      {
+        "day": 6,
+        "title": "NYC Hidden Gems",
+        "description": "Discover off-the-beaten-path neighborhoods and hidden gems with a local guide."
+      },
+      {
+        "day": 7,
+        "title": "Departure",
+        "description": "Transfer to New York airport for your departure flight. End of tour services."
+      }
+    ],
+    "max_group_size": 14,
+    "difficulty_level": "Easy",
+    "image_url": "https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    "rating": 4.7,
+    "reviews_count": 78
+  },
+  {
+    "id": 4,
+    "name": "South African Safari",
+    "description": "Embark on an unforgettable safari adventure in South Africa. Experience the thrill of spotting the Big Five in their natural habitat, explore the vibrant city of Cape Town, and enjoy the stunning landscapes of the Cape Peninsula. This tour combines wildlife encounters, cultural experiences, and natural beauty for an authentic African adventure.",
+    "destinations": [6],
+    "duration": 9,
+    "price": 2799,
+    "included": [
+      "8 nights accommodation",
+      "Daily breakfast, most lunches and dinners",
+      "Professional safari guides",
+      "All park entrance fees",
+      "Game drives in 4x4 vehicles",
+      "Cape Town city tour"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arrival in Cape Town",
+        "description": "Arrive in Cape Town and transfer to your hotel. Evening welcome dinner with South African wines."
+      },
+      {
+        "day": 2,
+        "title": "Cape Town Exploration",
+        "description": "Full-day tour including Table Mountain, V&A Waterfront, and the colorful Bo-Kaap neighborhood."
+      },
+      {
+        "day": 3,
+        "title": "Cape Peninsula",
+        "description": "Journey along the stunning Cape Peninsula to Cape Point and visit the penguin colony at Boulders Beach."
+      },
+      {
+        "day": 4,
+        "title": "Winelands Experience",
+        "description": "Day trip to the scenic Cape Winelands with tastings at award-winning estates in Stellenbosch and Franschhoek."
+      },
+      {
+        "day": 5,
+        "title": "Cape Town to Safari Lodge",
+        "description": "Morning flight to a private game reserve. Afternoon safari drive with chance to spot the Big Five."
+      },
+      {
+        "day": 6,
+        "title": "Safari Experience",
+        "description": "Early morning and late afternoon game drives. Relaxation time at the lodge between drives."
+      },
+      {
+        "day": 7,
+        "title": "Safari and Nature Walks",
+        "description": "Morning game drive and afternoon guided bush walk with an experienced ranger."
+      },
+      {
+        "day": 8,
+        "title": "Safari to Cape Town",
+        "description": "Final morning game drive. Return flight to Cape Town. Farewell dinner at a local restaurant."
+      },
+      {
+        "day": 9,
+        "title": "Departure",
+        "description": "Transfer to Cape Town International Airport for your departure flight. End of tour services."
+      }
+    ],
+    "max_group_size": 10,
+    "difficulty_level": "Moderate",
+    "image_url": "https://images.unsplash.com/photo-1516426122078-c23e76319801?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    "rating": 4.9,
+    "reviews_count": 62
+  },
+  {
+    "id": 5,
+    "name": "Mediterranean Magic",
+    "description": "Explore the enchanting Mediterranean region on this delightful journey through coastal towns, historic sites, and picturesque islands. Enjoy breathtaking scenery, delicious cuisine, and warm hospitality as you discover the rich cultural heritage and natural beauty of this captivating part of the world.",
+    "destinations": [4, 10],
+    "duration": 8,
+    "price": 1999,
+    "included": [
+      "7 nights accommodation",
+      "Daily breakfast and selected meals",
+      "Expert guide throughout",
+      "All transportation including ferries",
+      "Entrance fees to attractions",
+      "Cooking class and wine tasting"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arrival in Venice",
+        "description": "Arrive in Venice and transfer to your hotel by water taxi. Evening orientation walk and welcome dinner."
+      },
+      {
+        "day": 2,
+        "title": "Venice Exploration",
+        "description": "Guided tour of St. Mark's Square, Doge's Palace and a gondola ride. Afternoon mask-making workshop."
+      },
+      {
+        "day": 3,
+        "title": "Venice to Santorini",
+        "description": "Morning at leisure in Venice. Afternoon flight to Santorini. Transfer to your cliffside hotel."
+      },
+      {
+        "day": 4,
+        "title": "Santorini Highlights",
+        "description": "Full-day tour of Santorini including the blue-domed churches of Oia and the ancient site of Akrotiri."
+      },
+      {
+        "day": 5,
+        "title": "Santorini Sailing",
+        "description": "Cruise around Santorini on a traditional sailboat with swimming stops and a BBQ lunch."
+      },
+      {
+        "day": 6,
+        "title": "Santorini Wine & Cuisine",
+        "description": "Visit local wineries and participate in a traditional Greek cooking class followed by dinner."
+      },
+      {
+        "day": 7,
+        "title": "Santorini at Leisure",
+        "description": "Free day to explore on your own or relax at the beach. Farewell dinner with sunset views."
+      },
+      {
+        "day": 8,
+        "title": "Departure",
+        "description": "Transfer to Santorini airport for your departure flight. End of tour services."
+      }
+    ],
+    "max_group_size": 12,
+    "difficulty_level": "Easy",
+    "image_url": "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    "rating": 4.8,
+    "reviews_count": 86
+  },
+  {
+    "id": 6,
+    "name": "Exotic Morocco",
+    "description": "Immerse yourself in the exotic colors, scents, and sounds of Morocco on this captivating journey. From the bustling medinas of Marrakech to the serene beauty of the Sahara Desert, experience the rich cultural heritage, stunning architecture, and warm hospitality of this North African gem.",
+    "destinations": [9],
+    "duration": 8,
+    "price": 1699,
+    "included": [
+      "7 nights accommodation in riads and desert camp",
+      "Daily breakfast and selected meals",
+      "Transportation in private vehicle",
+      "Camel trek in the Sahara",
+      "Local guides in each city",
+      "Cooking class and cultural activities"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arrival in Marrakech",
+        "description": "Arrive in Marrakech and transfer to your traditional riad. Evening orientation walk and welcome dinner."
+      },
+      {
+        "day": 2,
+        "title": "Marrakech Exploration",
+        "description": "Full-day tour of Marrakech including the Bahia Palace, Koutoubia Mosque, and vibrant souks."
+      },
+      {
+        "day": 3,
+        "title": "Atlas Mountains",
+        "description": "Day trip to the Atlas Mountains. Visit Berber villages and enjoy a traditional lunch with a local family."
+      },
+      {
+        "day": 4,
+        "title": "Marrakech to Sahara",
+        "description": "Journey through the stunning landscape to the Sahara Desert. Camel trek to your desert camp for the night."
+      },
+      {
+        "day": 5,
+        "title": "Sahara to Fes",
+        "description": "Sunrise in the desert followed by a drive to Fes. Stop at scenic spots along the way."
+      },
+      {
+        "day": 6,
+        "title": "Fes Medina",
+        "description": "Guided tour of the UNESCO-listed Fes Medina. Visit to leather tanneries and artisan workshops."
+      },
+      {
+        "day": 7,
+        "title": "Fes to Marrakech",
+        "description": "Return to Marrakech. Afternoon cooking class to learn Moroccan cuisine. Farewell dinner."
+      },
+      {
+        "day": 8,
+        "title": "Departure",
+        "description": "Transfer to Marrakech airport for your departure flight. End of tour services."
+      }
+    ],
+    "max_group_size": 12,
+    "difficulty_level": "Moderate",
+    "image_url": "https://images.unsplash.com/photo-1597212618440-806262de4f6b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    "rating": 4.7,
+    "reviews_count": 53
+  },
+  {
+    "id": 7,
+    "name": "South American Discovery",
+    "description": "Explore the vibrant cultures and breathtaking landscapes of South America on this exciting adventure. From the pulsating rhythms of Rio de Janeiro to the ancient wonders of Machu Picchu, experience the incredible diversity and natural beauty of this fascinating continent.",
+    "destinations": [7],
+    "duration": 10,
+    "price": 2599,
+    "included": [
+      "9 nights accommodation",
+      "Daily breakfast and selected meals",
+      "Internal flights",
+      "Professional English-speaking guides",
+      "All ground transportation",
+      "Entrance fees to attractions"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arrival in Rio de Janeiro",
+        "description": "Arrive in Rio de Janeiro and transfer to your beachfront hotel. Evening welcome dinner."
+      },
+      {
+        "day": 2,
+        "title": "Rio Highlights",
+        "description": "Visit to Christ the Redeemer, Sugarloaf Mountain, and the famous beaches of Copacabana and Ipanema."
+      },
+      {
+        "day": 3,
+        "title": "Rio Cultural Experience",
+        "description": "Explore the historic center, sample Brazilian cuisine, and enjoy a samba dance lesson."
+      },
+      {
+        "day": 4,
+        "title": "Rio at Leisure",
+        "description": "Free day to relax on the beach or explore more of the city. Optional favela tour available."
+      },
+      {
+        "day": 5,
+        "title": "Rio to Iguazu Falls",
+        "description": "Morning flight to Iguazu Falls. Afternoon tour of the Brazilian side of the falls."
+      },
+      {
+        "day": 6,
+        "title": "Iguazu Falls Argentina",
+        "description": "Full-day exploration of the Argentine side of Iguazu Falls, including boat ride to the falls' base."
+      },
+      {
+        "day": 7,
+        "title": "Iguazu to Lima",
+        "description": "Flight to Lima, Peru. Evening tour of Miraflores district and dinner at a top Peruvian restaurant."
+      },
+      {
+        "day": 8,
+        "title": "Lima to Cusco",
+        "description": "Morning flight to Cusco. Afternoon acclimatization and walking tour of the historic center."
+      },
+      {
+        "day": 9,
+        "title": "Sacred Valley and Machu Picchu",
+        "description": "Full-day excursion to the Sacred Valley and Machu Picchu. Overnight in Aguas Calientes."
+      },
+      {
+        "day": 10,
+        "title": "Machu Picchu to Lima and Departure",
+        "description": "Morning at Machu Picchu. Return to Cusco and flight to Lima for your international departure."
+      }
+    ],
+    "max_group_size": 14,
+    "difficulty_level": "Moderate to Challenging",
+    "image_url": "https://images.unsplash.com/photo-1516306580123-e6e52b1b7b5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    "rating": 4.8,
+    "reviews_count": 47
+  },
+  {
+    "id": 8,
+    "name": "Down Under Adventure",
+    "description": "Discover the natural wonders and vibrant cities of Australia on this comprehensive tour. From the iconic Sydney Opera House to the Great Barrier Reef, experience the incredible diversity of landscapes, wildlife, and culture that make Australia such a unique and unforgettable destination.",
+    "destinations": [8],
+    "duration": 12,
+    "price": 3299,
+    "included": [
+      "11 nights accommodation",
+      "Daily breakfast and selected meals",
+      "Domestic flights within Australia",
+      "Expert local guides",
+      "All ground transportation",
+      "Great Barrier Reef cruise"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arrival in Sydney",
+        "description": "Arrive in Sydney and transfer to your hotel. Evening welcome dinner with harbour views."
+      },
+      {
+        "day": 2,
+        "title": "Sydney Highlights",
+        "description": "Full-day tour including the Opera House, Harbour Bridge, The Rocks, and a harbour cruise."
+      },
+      {
+        "day": 3,
+        "title": "Sydney and Bondi",
+        "description": "Morning visit to Taronga Zoo. Afternoon coastal walk from Bondi to Coogee Beach."
+      },
+      {
+        "day": 4,
+        "title": "Blue Mountains Excursion",
+        "description": "Day trip to the Blue Mountains National Park. See the Three Sisters and native wildlife."
+      },
+      {
+        "day": 5,
+        "title": "Sydney to Cairns",
+        "description": "Morning flight to Cairns, gateway to the Great Barrier Reef. Afternoon at leisure."
+      },
+      {
+        "day": 6,
+        "title": "Great Barrier Reef",
+        "description": "Full-day cruise to the Great Barrier Reef with opportunities for snorkeling and diving."
+      },
+      {
+        "day": 7,
+        "title": "Daintree Rainforest",
+        "description": "Explore the ancient Daintree Rainforest and Cape Tribulation. River cruise to spot crocodiles."
+      },
+      {
+        "day": 8,
+        "title": "Cairns to Uluru",
+        "description": "Flight to Uluru (Ayers Rock). Sunset viewing of this iconic monolith with champagne."
+      },
+      {
+        "day": 9,
+        "title": "Uluru and Kata Tjuta",
+        "description": "Sunrise at Uluru followed by a base tour. Afternoon visit to the Kata Tjuta rock formations."
+      },
+      {
+        "day": 10,
+        "title": "Uluru to Melbourne",
+        "description": "Morning flight to Melbourne. Afternoon orientation tour of Australia's cultural capital."
+      },
+      {
+        "day": 11,
+        "title": "Melbourne Exploration",
+        "description": "Discover Melbourne's laneways, markets, and gardens. Evening farewell dinner."
+      },
+      {
+        "day": 12,
+        "title": "Departure",
+        "description": "Transfer to Melbourne airport for your departure flight. End of tour services."
+      }
+    ],
+    "max_group_size": 16,
+    "difficulty_level": "Moderate",
+    "image_url": "https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    "rating": 4.9,
+    "reviews_count": 39
+  }
+]

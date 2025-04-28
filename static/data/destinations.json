@@ -1,0 +1,312 @@
+[
+  {
+    "id": 1,
+    "name": "Paris",
+    "country": "France",
+    "region": "Europe",
+    "description": "Known as the City of Light, Paris is famous for its iconic Eiffel Tower, world-class museums like the Louvre, and charming neighborhoods like Montmartre. Stroll along the Seine River, visit Notre-Dame Cathedral, and indulge in delicious pastries at local cafés.",
+    "highlights": [
+      "Eiffel Tower",
+      "Louvre Museum",
+      "Notre-Dame Cathedral",
+      "Montmartre",
+      "Seine River Cruises"
+    ],
+    "activities": [
+      "Cultural Tours",
+      "Food Tasting",
+      "Shopping",
+      "Museum Visits",
+      "City Walking Tours"
+    ],
+    "best_time_to_visit": "April to June, September to October",
+    "rating": 4.8,
+    "latitude": 48.8566,
+    "longitude": 2.3522,
+    "image_url": "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1503917988258-f87a78e3c995?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1526129318478-62ed807ebdf9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Bali",
+    "country": "Indonesia",
+    "region": "Asia",
+    "description": "Bali is a tropical paradise known for its beautiful beaches, lush rice terraces, and spiritual atmosphere. Visitors can explore ancient temples, enjoy world-class surfing, and experience the warm hospitality of the Balinese people. The island offers a perfect blend of relaxation and adventure.",
+    "highlights": [
+      "Ubud Monkey Forest",
+      "Tegallalang Rice Terraces",
+      "Uluwatu Temple",
+      "Kuta Beach",
+      "Tanah Lot Temple"
+    ],
+    "activities": [
+      "Surfing",
+      "Yoga Retreats",
+      "Temple Visits",
+      "Rice Terrace Trekking",
+      "Spa Treatments"
+    ],
+    "best_time_to_visit": "April to October (dry season)",
+    "rating": 4.7,
+    "latitude": -8.3405,
+    "longitude": 115.0920,
+    "image_url": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1555921015-5532091f6026?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1531778272849-d1dd22444c06?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "New York City",
+    "country": "United States",
+    "region": "North America",
+    "description": "The city that never sleeps, New York offers an unparalleled urban experience with its iconic skyline, diverse neighborhoods, and cultural attractions. From Broadway shows to world-famous museums, Central Park to Times Square, NYC is a vibrant metropolis with something for everyone.",
+    "highlights": [
+      "Statue of Liberty",
+      "Central Park",
+      "Empire State Building",
+      "Times Square",
+      "Metropolitan Museum of Art"
+    ],
+    "activities": [
+      "Broadway Shows",
+      "Museum Hopping",
+      "Shopping on Fifth Avenue",
+      "Food Tours",
+      "Harbor Cruises"
+    ],
+    "best_time_to_visit": "April to June, September to November",
+    "rating": 4.9,
+    "latitude": 40.7128,
+    "longitude": -74.0060,
+    "image_url": "https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1555109307-f7d9da25c244?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1492666673288-3c4b4576ad9a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1485871981521-5b1fd3805eee?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Santorini",
+    "country": "Greece",
+    "region": "Europe",
+    "description": "Santorini is famous for its stunning white-washed buildings with blue domes perched on cliffs overlooking the Aegean Sea. The island's unique landscape was formed by a volcanic eruption, creating dramatic vistas and beautiful beaches with red and black volcanic sand.",
+    "highlights": [
+      "Oia Sunset",
+      "Fira Town",
+      "Red Beach",
+      "Ancient Akrotiri",
+      "Caldera Views"
+    ],
+    "activities": [
+      "Sailing Tours",
+      "Wine Tasting",
+      "Cliff Jumping",
+      "Volcano Hiking",
+      "Photography Tours"
+    ],
+    "best_time_to_visit": "Late April to early November",
+    "rating": 4.9,
+    "latitude": 36.3932,
+    "longitude": 25.4615,
+    "image_url": "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1613395877344-13d4a8e0d49e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1555693950-d4c0900fad62?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1594056113573-2eb469f18395?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Tokyo",
+    "country": "Japan",
+    "region": "Asia",
+    "description": "Tokyo is a fascinating blend of ultramodern and traditional, with neon-lit skyscrapers alongside historic temples. The city offers exceptional food, shopping, and entertainment, as well as beautiful parks and gardens. Experience the unique Japanese culture through its cuisine, technology, and customs.",
+    "highlights": [
+      "Tokyo Skytree",
+      "Meiji Shrine",
+      "Shibuya Crossing",
+      "Tsukiji Fish Market",
+      "Akihabara Electric Town"
+    ],
+    "activities": [
+      "Sushi Making Classes",
+      "Anime and Manga Tours",
+      "Cherry Blossom Viewing",
+      "Sumo Wrestling Matches",
+      "Robot Restaurant Experience"
+    ],
+    "best_time_to_visit": "March to May, September to November",
+    "rating": 4.8,
+    "latitude": 35.6762,
+    "longitude": 139.6503,
+    "image_url": "https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1554797589-7241bb691973?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1551641506-ee5bf4cb45f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Cape Town",
+    "country": "South Africa",
+    "region": "Africa",
+    "description": "Cape Town is one of the world's most beautiful cities, nestled between stunning Table Mountain and the Atlantic Ocean. The city offers diverse experiences from wine tasting in nearby vineyards to wildlife viewing, along with a rich cultural heritage and vibrant food scene.",
+    "highlights": [
+      "Table Mountain",
+      "Robben Island",
+      "Cape of Good Hope",
+      "V&A Waterfront",
+      "Kirstenbosch Botanical Gardens"
+    ],
+    "activities": [
+      "Safari Tours",
+      "Shark Cage Diving",
+      "Wine Tasting",
+      "Paragliding",
+      "Township Tours"
+    ],
+    "best_time_to_visit": "November to March",
+    "rating": 4.7,
+    "latitude": -33.9249,
+    "longitude": 18.4241,
+    "image_url": "https://images.unsplash.com/photo-1580060839134-75a5edca2e99?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1559134917-8c5d05e609b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1629830861004-b0ea7f970954?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1543470629-ba7addd176ea?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Rio de Janeiro",
+    "country": "Brazil",
+    "region": "South America",
+    "description": "Rio de Janeiro, the Marvelous City, is known for its spectacular setting, with mountains meeting the sea and iconic landmarks like Christ the Redeemer and Sugarloaf Mountain. The city's famous beaches, vibrant culture, and lively festivals make it a top destination for travelers seeking both relaxation and excitement.",
+    "highlights": [
+      "Christ the Redeemer",
+      "Copacabana Beach",
+      "Sugarloaf Mountain",
+      "Ipanema Beach",
+      "Tijuca National Park"
+    ],
+    "activities": [
+      "Samba Dancing",
+      "Carnival Celebration",
+      "Hang Gliding",
+      "Hiking",
+      "Beach Volleyball"
+    ],
+    "best_time_to_visit": "December to March",
+    "rating": 4.6,
+    "latitude": -22.9068,
+    "longitude": -43.1729,
+    "image_url": "https://images.unsplash.com/photo-1516306580123-e6e52b1b7b5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1619546952812-520e98064a52?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1548866804-b99b42563896?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1661956602868-6ae368943878?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Sydney",
+    "country": "Australia",
+    "region": "Oceania",
+    "description": "Sydney is Australia's largest city, famous for its stunning harbor, iconic Opera House, and beautiful beaches. The city offers a perfect blend of urban sophistication and natural beauty, with excellent dining, shopping, and cultural experiences alongside opportunities for outdoor adventure.",
+    "highlights": [
+      "Sydney Opera House",
+      "Sydney Harbour Bridge",
+      "Bondi Beach",
+      "Taronga Zoo",
+      "The Rocks Historic District"
+    ],
+    "activities": [
+      "Bridge Climb",
+      "Harbour Cruises",
+      "Surfing Lessons",
+      "Coastal Walks",
+      "Aboriginal Cultural Tours"
+    ],
+    "best_time_to_visit": "September to November, March to May",
+    "rating": 4.7,
+    "latitude": -33.8688,
+    "longitude": 151.2093,
+    "image_url": "https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1549180030-48bf079fb38a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1546268060-2592ff93ee24?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1523428096881-5bd79d043006?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Marrakech",
+    "country": "Morocco",
+    "region": "Africa",
+    "description": "Marrakech is a vibrant city in Morocco known for its historic medina, colorful souks, and stunning Moorish architecture. Visitors are drawn to its exotic atmosphere, with bustling markets selling spices, textiles, and crafts, as well as beautiful gardens, palaces, and mosques that showcase the city's rich cultural heritage.",
+    "highlights": [
+      "Jemaa el-Fnaa Square",
+      "Bahia Palace",
+      "Majorelle Garden",
+      "Koutoubia Mosque",
+      "Medina Souks"
+    ],
+    "activities": [
+      "Cooking Classes",
+      "Hammam Spa Experience",
+      "Camel Riding",
+      "Hot Air Balloon Rides",
+      "Atlas Mountains Excursions"
+    ],
+    "best_time_to_visit": "March to May, September to November",
+    "rating": 4.6,
+    "latitude": 31.6295,
+    "longitude": -7.9811,
+    "image_url": "https://images.unsplash.com/photo-1597212618440-806262de4f6b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1564507592333-c60657eea523?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1539020140153-e479b8c22e70?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1530875530560-4011a44fac7a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Venice",
+    "country": "Italy",
+    "region": "Europe",
+    "description": "Venice is a unique city built on water, famous for its canals, gondolas, and Renaissance architecture. This romantic destination offers a magical atmosphere with its maze-like streets, elegant palaces, and beautiful bridges. Experience the rich history and artistry of Venice through its museums, churches, and traditional crafts.",
+    "highlights": [
+      "St. Mark's Square",
+      "Grand Canal",
+      "Rialto Bridge",
+      "Doge's Palace",
+      "Murano and Burano Islands"
+    ],
+    "activities": [
+      "Gondola Rides",
+      "Mask Making Workshops",
+      "Glass Blowing Demonstrations",
+      "Venetian Cuisine Tours",
+      "Art Biennale"
+    ],
+    "best_time_to_visit": "April to June, September to October",
+    "rating": 4.8,
+    "latitude": 45.4408,
+    "longitude": 12.3155,
+    "image_url": "https://images.unsplash.com/photo-1534113414509-0eec2bfb493f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    "gallery": [
+      "https://images.unsplash.com/photo-1514890547357-a9ee288728e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1528835903935-819fd328f5a8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    ]
+  }
+]

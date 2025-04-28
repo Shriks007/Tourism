@@ -1,0 +1,422 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ tour.name }} | Wanderlust Tours{% endblock %}
+
+{% block extra_css %}
+<style>
+    .itinerary-item {
+        position: relative;
+        padding-left: 30px;
+        margin-bottom: 2rem;
+    }
+    
+    .itinerary-item:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: var(--bs-primary);
+        z-index: 1;
+    }
+    
+    .itinerary-item:after {
+        content: '';
+        position: absolute;
+        left: 9px;
+        top: 20px;
+        width: 2px;
+        height: calc(100% + 10px);
+        background-color: var(--bs-gray-300);
+        z-index: 0;
+    }
+    
+    .itinerary-item:last-child:after {
+        display: none;
+    }
+    
+    .included-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+    
+    .included-item i {
+        color: var(--bs-primary);
+        margin-right: 10px;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="py-5 bg-dark text-white">
+    <div class="container py-5">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <div class="mb-3">
+                    <span class="badge bg-primary rounded-pill mb-2">{{ tour.duration }} Days</span>
+                    <span class="badge bg-secondary rounded-pill mb-2">{{ tour.difficulty_level }}</span>
+                </div>
+                <h1 class="fw-bold display-4 mb-3">{{ tour.name }}</h1>
+                <div class="d-flex align-items-center mb-3">
+                    <div class="me-3">
+                        <span class="text-warning"><i class="fas fa-star"></i> {{ tour.rating }}</span>
+                        <span class="text-light ms-1">({{ tour.reviews_count }} reviews)</span>
+                    </div>
+                    <div>
+                        <span><i class="fas fa-users me-1"></i> Max {{ tour.max_group_size }} people</span>
+                    </div>
+                </div>
+                <p class="lead mb-4">{{ tour.description }}</p>
+                <div class="d-flex align-items-center">
+                    <h3 class="text-primary fw-bold mb-0 me-3">${{ tour.price }}</h3>
+                    <p class="mb-0">per person</p>
+                </div>
+                <div class="mt-4">
+                    <a href="/contact" class="btn btn-primary btn-lg me-2">Book This Tour</a>
+                    <a href="#tour-details" class="btn btn-outline-light btn-lg">View Details</a>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <img src="{{ tour.image_url }}" alt="{{ tour.name }}" class="img-fluid rounded-3 shadow">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Tour Details -->
+<section id="tour-details" class="py-5">
+    <div class="container">
+        <div class="row">
+            <!-- Main Content -->
+            <div class="col-lg-8 mb-5 mb-lg-0">
+                <!-- Tour Overview -->
+                <div class="mb-5">
+                    <h2 class="fw-bold mb-4">Tour Overview</h2>
+                    <p>{{ tour.description }}</p>
+                    
+                    <!-- Featured Destinations -->
+                    <h3 class="fw-bold mt-4 mb-3">Featured Destinations</h3>
+                    <div class="row g-3">
+                        {% for destination in tour_destinations %}
+                        <div class="col-md-6 col-lg-4">
+                            <a href="/destinations/{{ destination.id }}" class="text-decoration-none">
+                                <div class="card h-100">
+                                    <img src="{{ destination.image_url }}" class="card-img-top" alt="{{ destination.name }}" style="height: 150px; object-fit: cover;">
+                                    <div class="card-body">
+                                        <h5 class="card-title fw-bold">{{ destination.name }}</h5>
+                                        <p class="card-text text-muted small mb-0">{{ destination.country }}</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                
+                <!-- Itinerary -->
+                <div class="mb-5">
+                    <h2 class="fw-bold mb-4">Detailed Itinerary</h2>
+                    
+                    {% for day in tour.itinerary %}
+                    <div class="itinerary-item">
+                        <h4 class="fw-bold">Day {{ day.day }}: {{ day.title }}</h4>
+                        <p>{{ day.description }}</p>
+                    </div>
+                    {% endfor %}
+                </div>
+                
+                <!-- What's Included -->
+                <div class="mb-5">
+                    <h2 class="fw-bold mb-4">What's Included</h2>
+                    <div class="row">
+                        <div class="col-md-6">
+                            {% for item in tour.included %}
+                                {% if loop.index <= (tour.included|length / 2)|round(0, 'ceil') %}
+                                <div class="included-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>{{ item }}</span>
+                                </div>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                        <div class="col-md-6">
+                            {% for item in tour.included %}
+                                {% if loop.index > (tour.included|length / 2)|round(0, 'ceil') %}
+                                <div class="included-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>{{ item }}</span>
+                                </div>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Gallery -->
+                <div>
+                    <h2 class="fw-bold mb-4">Tour Gallery</h2>
+                    <div class="row g-3">
+                        <div class="col-md-4 gallery-container">
+                            <img src="{{ tour.image_url }}" alt="{{ tour.name }}" class="img-fluid rounded gallery-image">
+                        </div>
+                        {% for destination in tour_destinations %}
+                            {% for image in destination.gallery %}
+                                {% if loop.index <= 2 %}
+                                <div class="col-md-4 gallery-container">
+                                    <img src="{{ image }}" alt="{{ destination.name }}" class="img-fluid rounded gallery-image">
+                                </div>
+                                {% endif %}
+                            {% endfor %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Sidebar -->
+            <div class="col-lg-4">
+                <!-- Quick Facts -->
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-body">
+                        <h4 class="fw-bold mb-4">Tour Highlights</h4>
+                        <div class="d-flex mb-3">
+                            <div class="me-3">
+                                <i class="far fa-clock text-primary"></i>
+                            </div>
+                            <div>
+                                <h6 class="fw-bold mb-1">Duration</h6>
+                                <p class="mb-0">{{ tour.duration }} days</p>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-3">
+                            <div class="me-3">
+                                <i class="fas fa-users text-primary"></i>
+                            </div>
+                            <div>
+                                <h6 class="fw-bold mb-1">Group Size</h6>
+                                <p class="mb-0">Max {{ tour.max_group_size }} people</p>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-3">
+                            <div class="me-3">
+                                <i class="fas fa-mountain text-primary"></i>
+                            </div>
+                            <div>
+                                <h6 class="fw-bold mb-1">Difficulty Level</h6>
+                                <p class="mb-0">{{ tour.difficulty_level }}</p>
+                            </div>
+                        </div>
+                        <div class="d-flex">
+                            <div class="me-3">
+                                <i class="far fa-star text-primary"></i>
+                            </div>
+                            <div>
+                                <h6 class="fw-bold mb-1">Rating</h6>
+                                <p class="mb-0">{{ tour.rating }}/5 based on {{ tour.reviews_count }} reviews</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Booking Form -->
+                <div class="card shadow-sm mb-4">
+                    <div class="card-body">
+                        <h4 class="fw-bold mb-3">Book This Tour</h4>
+                        <p class="mb-4">Fill out this form to start your booking process. Our travel experts will contact you shortly.</p>
+                        <form id="booking-inquiry-form">
+                            <input type="hidden" name="tour" value="{{ tour.name }}">
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Your Name</label>
+                                <input type="text" class="form-control" id="name" name="name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email Address</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="phone" class="form-label">Phone Number</label>
+                                <input type="tel" class="form-control" id="phone" name="phone">
+                            </div>
+                            <div class="mb-3">
+                                <label for="departure-date" class="form-label">Preferred Departure Date</label>
+                                <input type="date" class="form-control" id="departure-date" name="departure_date">
+                            </div>
+                            <div class="mb-3">
+                                <label for="travelers" class="form-label">Number of Travelers</label>
+                                <select class="form-select" id="travelers" name="travelers">
+                                    <option value="1">1</option>
+                                    <option value="2" selected>2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5+">5 or more</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Special Requests</label>
+                                <textarea class="form-control" id="message" name="message" rows="3"></textarea>
+                            </div>
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-primary">Submit Inquiry</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                
+                <!-- Similar Tours -->
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h4 class="fw-bold mb-3">Similar Tours</h4>
+                        <div class="d-flex mb-3">
+                            <img src="https://images.unsplash.com/photo-1493707553966-283afac8c358?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="European Classics" class="rounded me-3" style="width: 70px; height: 70px; object-fit: cover;">
+                            <div>
+                                <h6 class="fw-bold mb-1">European Classics</h6>
+                                <div class="d-flex justify-content-between">
+                                    <small class="text-muted">12 days</small>
+                                    <small class="text-primary fw-bold">$2,499</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-3">
+                            <img src="https://images.unsplash.com/photo-1528164344705-47542687000d?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Asian Adventure" class="rounded me-3" style="width: 70px; height: 70px; object-fit: cover;">
+                            <div>
+                                <h6 class="fw-bold mb-1">Asian Adventure</h6>
+                                <div class="d-flex justify-content-between">
+                                    <small class="text-muted">10 days</small>
+                                    <small class="text-primary fw-bold">$2,199</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex">
+                            <img src="https://images.unsplash.com/photo-1597212618440-806262de4f6b?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Exotic Morocco" class="rounded me-3" style="width: 70px; height: 70px; object-fit: cover;">
+                            <div>
+                                <h6 class="fw-bold mb-1">Exotic Morocco</h6>
+                                <div class="d-flex justify-content-between">
+                                    <small class="text-muted">8 days</small>
+                                    <small class="text-primary fw-bold">$1,699</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Reviews Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="fw-bold mb-4">Customer Reviews</h2>
+        
+        <div class="row mb-4">
+            <div class="col-lg-4 mb-4 mb-lg-0">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between mb-2">
+                            <div class="d-flex align-items-center">
+                                <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px;">
+                                    <i class="fas fa-user text-white"></i>
+                                </div>
+                                <div>
+                                    <h5 class="fw-bold mb-0">Michael Brown</h5>
+                                    <small class="text-muted">Traveled May 2023</small>
+                                </div>
+                            </div>
+                            <div class="text-warning">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <h6 class="fw-bold mb-2">Amazing experience from start to finish!</h6>
+                        <p>This tour exceeded all my expectations. Our guide was incredibly knowledgeable and passionate about each destination. The accommodations were excellent and the itinerary perfectly balanced. I especially loved the local experiences that felt authentic rather than touristy.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 mb-4 mb-lg-0">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between mb-2">
+                            <div class="d-flex align-items-center">
+                                <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px;">
+                                    <i class="fas fa-user text-white"></i>
+                                </div>
+                                <div>
+                                    <h5 class="fw-bold mb-0">Sarah Parker</h5>
+                                    <small class="text-muted">Traveled June 2023</small>
+                                </div>
+                            </div>
+                            <div class="text-warning">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                        <h6 class="fw-bold mb-2">Great tour with minor hiccups</h6>
+                        <p>The destinations were absolutely stunning and our guide made each place come alive with interesting stories and facts. The small group size made it feel personal and we had enough free time to explore on our own. My only complaint was that one of the hotels wasn't as nice as expected, but the company quickly resolved the issue.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between mb-2">
+                            <div class="d-flex align-items-center">
+                                <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px;">
+                                    <i class="fas fa-user text-white"></i>
+                                </div>
+                                <div>
+                                    <h5 class="fw-bold mb-0">James & Lisa Thompson</h5>
+                                    <small class="text-muted">Traveled April 2023</small>
+                                </div>
+                            </div>
+                            <div class="text-warning">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <h6 class="fw-bold mb-2">Perfect honeymoon adventure!</h6>
+                        <p>We chose this tour for our honeymoon and it was the best decision! The itinerary was perfectly paced with a good mix of activities and relaxation time. All the little details were taken care of, and we felt completely pampered. The welcome and farewell dinners were especially memorable with amazing local cuisine and atmosphere.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center">
+            <a href="#" class="btn btn-outline-primary">View All {{ tour.reviews_count }} Reviews</a>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="py-5 bg-primary text-white">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8 mb-4 mb-lg-0">
+                <h2 class="fw-bold">Ready to Book This Tour?</h2>
+                <p class="lead mb-0">Secure your spot today and prepare for an unforgettable adventure.</p>
+            </div>
+            <div class="col-lg-4 text-lg-end">
+                <a href="/contact" class="btn btn-light btn-lg me-2">Book Now</a>
+                <a href="#" class="btn btn-outline-light btn-lg">Ask a Question</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{{ url_for('static', filename='js/gallery.js') }}"></script>
+{% endblock %}

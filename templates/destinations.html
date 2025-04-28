@@ -1,0 +1,123 @@
+{% extends 'base.html' %}
+
+{% block title %}Destinations | Wanderlust{% endblock %}
+
+{% block content %}
+<!-- Header -->
+<section class="py-5 bg-dark text-white">
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-lg-6">
+                <h1 class="fw-bold display-4 mb-3">Explore Destinations</h1>
+                <p class="lead">Discover breathtaking places around the world. From exotic beaches to historic cities, find your perfect destination.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Filter Section -->
+<section class="py-4 bg-light border-bottom">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <form action="/destinations" method="get" class="d-flex flex-wrap gap-3 align-items-end">
+                    <div>
+                        <label for="region" class="form-label">Filter by Region</label>
+                        <select class="form-select" id="region" name="region">
+                            <option value="">All Regions</option>
+                            {% for region in regions %}
+                                <option value="{{ region }}" {% if selected_region == region %}selected{% endif %}>{{ region }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div>
+                        <button type="submit" class="btn btn-primary">Apply Filter</button>
+                        {% if selected_region %}
+                            <a href="/destinations" class="btn btn-outline-secondary ms-2">Clear Filter</a>
+                        {% endif %}
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Destinations Grid -->
+<section class="py-5">
+    <div class="container">
+        {% if selected_region %}
+            <div class="mb-4">
+                <h2 class="fw-bold">Destinations in {{ selected_region }}</h2>
+                <p class="text-muted">Showing {{ destinations|length }} destination(s) in {{ selected_region }}</p>
+            </div>
+        {% endif %}
+        
+        {% if destinations|length > 0 %}
+            <div class="row g-4">
+                {% for destination in destinations %}
+                <div class="col-md-6 col-lg-4 animate-on-scroll">
+                    <a href="/destinations/{{ destination.id }}" class="text-decoration-none">
+                        <div class="destination-card">
+                            <div class="destination-card__image" style="background-image: url('{{ destination.image_url }}');"></div>
+                            <div class="destination-card__overlay">
+                                <h3 class="fs-5 fw-bold mb-1">{{ destination.name }}</h3>
+                                <p class="mb-0">{{ destination.country }}</p>
+                                <div class="mt-2 d-flex gap-2">
+                                    <span class="badge bg-primary rounded-pill">{{ destination.region }}</span>
+                                    <span class="badge bg-secondary rounded-pill">
+                                        <i class="fas fa-star me-1 small"></i>{{ destination.rating }}
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <div class="text-center py-5">
+                <i class="fas fa-map-marked-alt fa-4x text-muted mb-3"></i>
+                <h3>No destinations found</h3>
+                <p class="text-muted">Try adjusting your filters or check back later.</p>
+                <a href="/destinations" class="btn btn-primary mt-3">View All Destinations</a>
+            </div>
+        {% endif %}
+    </div>
+</section>
+
+<!-- Destination Map -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="text-center mb-4">
+            <h2 class="fw-bold">Where Will You Go Next?</h2>
+            <p class="text-muted">Explore our global destinations</p>
+        </div>
+        <div class="map-container shadow-sm">
+            <!-- Placeholder for world map -->
+            <div class="bg-secondary h-100 d-flex align-items-center justify-content-center">
+                <div class="text-center">
+                    <i class="fas fa-globe-americas fa-4x mb-3"></i>
+                    <h4>Interactive World Map</h4>
+                    <p class="mb-0">Explore destinations around the world</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="py-5 bg-primary text-white">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8 mb-4 mb-lg-0">
+                <h2 class="fw-bold">Ready to Start Your Adventure?</h2>
+                <p class="lead mb-0">Explore our tour packages or create a custom itinerary for your dream vacation.</p>
+            </div>
+            <div class="col-lg-4 text-lg-end">
+                <a href="/tours" class="btn btn-light btn-lg me-2">View Tours</a>
+                <a href="/contact" class="btn btn-outline-light btn-lg">Contact Us</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
